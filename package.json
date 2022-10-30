@@ -23,6 +23,7 @@
     "modern-normalize": "^1.1.0",
     "notiflix": "^3.2.5",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-transformer-hbs": "^1.0.4",
     "simplelightbox": "^2.10.4"
   },
   "devDependencies": {
