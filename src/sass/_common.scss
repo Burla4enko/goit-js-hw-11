@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.is-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.search-form {
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    background-color: rgb(0, 132, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &__input {
+        width: 30%;
+        height: 40px;
+        font-size: 16px;
+        padding: 5px 15px;
+        border: 0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        outline: 0;
+    }
+
+    &__btn {
+        min-width: 40px;
+        min-height: 40px;
+        padding: 8px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border: 0;
+        background-color: rgb(119, 184, 228);
+        transition: background-color 250ms ease;
+        cursor: pointer;
+        color: black;
+        text-transform: uppercase;
+        font-size: 12px;
+
+        &:hover,
+        &:focus {
+            background-color: rgb(97, 168, 216);
+        }
+    }
+}
+
+.gallery,
+.info,
+.search-form {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 70px;
+    margin-bottom: 20px;
+}
+
+.photo-card {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% / 4) - 10px);
+
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: box-shadow 300ms ease;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+            0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.info {
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+    gap: 10px;
+    padding: 0 10px;
+
+    border: 1px solid lightgrey;
+    border-top: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    font-size: 14px;
+}
+
+.info-item {
+    text-align: center;
+}
+
+.load-more {
+    display: block;
+    margin: 0 auto 40px;
+    min-width: 80px;
+    min-height: 40px;
+    padding: 8px 15px;
+
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(119, 184, 228);
+
+    cursor: pointer;
+    color: black;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: background-color 250ms ease;
+
+    &:hover,
+    &:focus {
+        background-color: rgb(97, 168, 216);
+    }
+}
